@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>form validate</title>
+<script>
+	function validation(){
+	var firstname = document.myform.fname.value;
+	var lastname = document.myform.lname.value;
+	var email = document.myform.email.value;
+
+
+
+	if(firstname==null || firstname==""){
+	alert("name cant be blanck");
+	return false;
+	}else if(lastname.length<6){
+	 alert("last name must be atleast 6 characters long");
+	 return false;
+	 }
+	}
+	</script>
+	<body>
+	<form name = "myform"method="post"action="abc.jsp"onsubmit="return validateform()">
+
+	first name :<input type="text" name="fname"><br/>
+	last name :<input type="text" name="lname"><br/>
+	email add :<input type="text" name="email"><br/>
+	
+	<select>
+	branch<select name="branch">
+	      <option>CS
+	      <option>IT
+	</select>
+	   <input type="submit" value="register">
+	   </form>
+	   		     
